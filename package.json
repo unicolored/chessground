@@ -20,6 +20,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",
+    "@types/three": "^0.172.0",
     "esbuild": "^0.24.0",
     "eslint": "^8.57.0",
     "prettier": "^3.2.5",
@@ -57,8 +58,5 @@
     "url": "https://github.com/lichess-org/chessground/issues"
   },
   "funding": "https://lichess.org/patron",
-  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1",
-  "dependencies": {
-    "@types/three": "^0.172.0"
-  }
+  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1"
 }
