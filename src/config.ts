@@ -91,6 +91,9 @@ export interface Config {
     brushes?: DrawBrushes;
     onChange?: (shapes: DrawShape[]) => void; // called after drawable shapes change
   };
+  canvas3D?: {
+    enabled?: boolean;
+  };
 }
 
 export function applyAnimation(state: HeadlessState, config: Config): void {

@@ -2,6 +2,7 @@ import { Api, start } from './api.js';
 import { Config, configure } from './config.js';
 import { HeadlessState, State, defaults } from './state.js';
 
+import { renderCanvas } from './canvas.js';
 import { renderWrap } from './wrap.js';
 import * as events from './events.js';
 import { render, renderResized, updateBounds } from './render.js';
@@ -22,7 +23,8 @@ export function Chessground(element: HTMLElement, config?: Config): Api {
     const prevUnbind = 'dom' in maybeState ? maybeState.dom.unbind : undefined;
     // compute bounds from existing board element if possible
     // this allows non-square boards from CSS to be handled (for 3D)
-    const elements = renderWrap(element, maybeState),
+
+    const elements = config?.canvas3D ? renderCanvas(element, maybeState) : renderWrap(element, maybeState),
       bounds = util.memo(() => elements.board.getBoundingClientRect()),
       redrawNow = (skipSvg?: boolean): void => {
         render(state);

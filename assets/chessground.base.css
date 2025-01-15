@@ -4,6 +4,21 @@
   display: block;
 }
 
+.cg-canvas {
+  box-sizing: content-box;
+  position: relative;
+  display: block;
+}
+
+.cg-canvas canvas {
+  background: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
 cg-container {
   position: absolute;
   width: 100%;

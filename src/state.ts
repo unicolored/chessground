@@ -102,6 +102,9 @@ export interface HeadlessState {
   drawable: Drawable;
   exploding?: cg.Exploding;
   hold: cg.Timer;
+  canvas3D: {
+    enabled: boolean;
+  };
 }
 
 export interface State extends HeadlessState {
@@ -195,5 +198,8 @@ export function defaults(): HeadlessState {
       prevSvgHash: '',
     },
     hold: timer(),
+    canvas3D: {
+      enabled: false,
+    },
   };
 }
